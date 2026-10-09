@@ -1,5 +1,7 @@
 .ipynb_checkpoints/
-submission.csv
+*.csv
 *.h5
 *.keras
 *.tfrec
+*.zip
+data

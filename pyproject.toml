@@ -10,4 +10,10 @@ dependencies = [
     "matplotlib>=3.11.2",
     "pandas>=3.0.6",
     "plotly>=7.1.0",
+    "tensorflow>=2.21.0",
+]
+
+[dependency-groups]
+dev = [
+    "kaggle>=2.2.4",
 ]
