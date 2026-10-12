@@ -3,14 +3,16 @@ name = "flower-classification-on-tpu"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.13"   # TF 2.18 รองรับถึง Python 3.12
 dependencies = [
     "ipynb>=0.5.1",
     "jupyter>=1.1.1",
     "matplotlib>=3.11.2",
     "pandas>=3.0.6",
     "plotly>=7.1.0",
-    "tensorflow>=2.21.0",
+    # tensorflow-metal 1.2.0 (ตัวล่าสุด) ใช้ได้ถึง TF 2.18 — TF ใหม่กว่านี้ import ไม่ขึ้น
+    "tensorflow>=2.18,<2.19",
+    "tensorflow-metal==1.2.0; sys_platform == 'darwin' and platform_machine == 'arm64'",
 ]
 
 [dependency-groups]
